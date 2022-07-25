@@ -37,8 +37,8 @@ const options = {
   method: 'GET',
   url: 'https://asm-climate-change-live1.p.rapidapi.com/api/v0/news',
   headers: {
-    'X-RapidAPI-Key': 'ec1f5ba23emsha3699522bc732a3p1ab5bejsna5e00455c6f5',
-    'X-RapidAPI-Host': 'asm-climate-change-live1.p.rapidapi.com'
+    'X-RapidAPI-Key': '...',
+    'X-RapidAPI-Host': '...'
   }
 };
 
