@@ -79,8 +79,8 @@ router.get('/', (req, res) => {
   res.json('welcome to ASM climate api')
 })
 
-newsPapers.forEach(async (newsPaper) => {
-  await axios.get(newsPaper.address).then((response) => {
+newsPapers.forEach((newsPaper) => {
+  axios.get(newsPaper.address).then((response) => {
     const html = response.data
     const $ = cheerio.load(html)
 
@@ -97,11 +97,11 @@ newsPapers.forEach(async (newsPaper) => {
   })
 })
 
-router.get('/news', async (req, res) => {
+router.get('/news', (req, res) => {
   res.json(articles)
 })
 
-router.get('/news/:newspaperID', async (req, res) => {
+router.get('/news/:newspaperID', (req, res) => {
   const newsPaperID = req.params.newspaperID
 
   const newspaperAddress = newsPapers.filter(
