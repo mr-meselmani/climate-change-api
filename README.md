@@ -23,3 +23,28 @@ npm run start
 > 3. You can see multiple objects thats include data.
 
 > 4. You can modify the url to see from specific source like: `https://asmclimateapi.herokuapp.com/api/v0/news/guardian`
+
+## You can use it in your application from RapidApi platform
+
+> Go to RapidApi link for this api [URL]('https://rapidapi.com/MrMeselmani/api/asm-climate-change-live1')
+
+_Then use this code in your app HEADERS ARE IMPORTNAT FOR AUTHENTICATING THE REQUEST_
+
+```
+const axios = require("axios");
+
+const options = {
+  method: 'GET',
+  url: 'https://asm-climate-change-live1.p.rapidapi.com/api/v0/news',
+  headers: {
+    'X-RapidAPI-Key': 'ec1f5ba23emsha3699522bc732a3p1ab5bejsna5e00455c6f5',
+    'X-RapidAPI-Host': 'asm-climate-change-live1.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+```
